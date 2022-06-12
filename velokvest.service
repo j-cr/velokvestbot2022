@@ -1,0 +1,18 @@
+
+# /etc/systemd/system/velokvest.service
+
+[Unit]
+Description=velokvest tg bot
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=velokvest
+Group=velokvest
+WorkingDirectory=/home/velokvest
+ExecStart=/home/velokvest/bot
+
+[Install]
+WantedBy=multi-user.target
