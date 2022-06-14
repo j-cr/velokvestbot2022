@@ -9,7 +9,7 @@ CREATE TABLE visits (
 
 id         INTEGER      NOT NULL  PRIMARY KEY AUTOINCREMENT,
 user       INTEGER      NOT NULL,
-point      VARCHAR(10)  NOT NULL,
+point      TEXT         NOT NULL,
 photo      TEXT         NOT NULL  UNIQUE,
 score      INTEGER      NOT NULL,
 added      INTEGER      NOT NULL,

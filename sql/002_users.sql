@@ -5,9 +5,9 @@ CREATE TABLE users (
 -- kind is the group the user is in (same constants as points/kind)
 
 id               INTEGER      NOT NULL PRIMARY KEY,
-name             VARCHAR(255) NOT NULL,
-kind             INTEGER NOT NULL,
-currentPoint     VARCHAR(10) NOT NULL
+name             TEXT         NOT NULL,
+kind             INTEGER      NOT NULL,
+currentPoint     TEXT         NOT NULL
 );
 -- +goose StatementEnd
 
