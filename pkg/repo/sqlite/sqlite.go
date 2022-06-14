@@ -136,7 +136,7 @@ func (r *Repo) GetPoint(id PointId) (*models.Point, error) {
 
 // whether the user got to this point first or not
 func (r *Repo) IsUserFirstHere(u UserId, p PointId) (bool, error) {
-	_sql := ` SELECT EXISTS(SELECT 1 FROM visits WHERE user = ? AND point = ?) `
+	_sql := ` SELECT EXISTS(SELECT 1 FROM visits WHERE point = ?) `
 
 	var alreadyExists int
 	err := r.DB.Get(&alreadyExists, _sql, u, p)
